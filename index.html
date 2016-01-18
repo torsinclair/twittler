@@ -1,27 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <title>Twittler</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
   </head>
+
   <body>
+
+    <!-- Header -->
+    <header class="container intro">
+      <h1 class="logo">Twittler</h1>
+
+      <!-- Twittler Info -->
+
+      <ul class="twittlerStats">
+        <li>
+          <h4></h4>
+          <p id="newtweets"></p>
+        </li>
+        <li>
+          <h4></h4>
+          <p></p>
+        </li>
+        <li>
+          <h4></h4>
+          <p></p>
+        </li>
+      </ul>
+
+    </header>
+
     <script>
 
       $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
-
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
-
+        $('.user').on('click', 'button', function(){
+          $(this).closest('.container').find('.usertweets').slideToggle();
+        });
       });
 
     </script>
+
+    <!-- user information -->
+    <div class="container">
+      <h3 class="twittlerStats">Most Active Twittlers</h3>
+    </div>
+
+    <!-- shawndrost -->
+    <div class="container user">
+      <button class"btn">@shawndrost</button>
+      <h6 class="shawndrost usertweets"></h6>
+    </div>
+
+    <!-- sharksforcheap -->
+    <div class="container user">
+      <button class"btn">@sharksforcheap</button>
+      <h6 class="sharksforcheap usertweets"></h6>
+    </div>
+
+
+    <!-- mracus -->
+    <div class="container user">
+      <button class"btn">@mracus</button>
+      <h6 class="mracus usertweets"></h6>
+    </div>
+
+    <!-- douglascalhoun -->
+    <div class="container user">
+      <button class"btn">@douglascalhoun</button>
+      <h6 class="douglascalhoun usertweets"></h6>
+    </div>
+
+
+
+    <!-- Space Section -->
+    <section class="container">
+      <a>
+      <button class="secondary btn btn-alt">Update Tweets</button>
+      <h6></h6>
+      </a>
+    </section>
+
+    <div>
+      <h6 class="container tweets">
+      
+      </h6>
+    </div>
+
+    <script>
+
+      $(document).ready(function(){
+        $('.btn-alt').on('click', function(){
+        
+        var $body = $('.tweets');
+        var $user1 = $('.shawndrost');
+        var $user2 = $('.sharksforcheap');
+        var $user3 = $('.mracus');
+        var $user4 = $('.douglascalhoun');
+
+        var d = new Date();
+        var tweetTime = d.toLocaleString()
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<h6>');
+          var $shawndrost = $('<h6>');
+          var $sharksforcheap = $('<h6>');
+          var $mracus = $('<h6>');
+          var $douglashoun = $('<h6>');
+
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " : " + tweetTime).appendTo($('.tweets'));
+
+          /*@shawndrost*/
+          if(tweet.user === "shawndrost"){
+            $shawndrost.text('@' + tweet.user + ': ' + tweet.message + " : " + tweetTime).appendTo($('.shawndrost'));
+          }
+
+
+          /*@sharksforcheap*/
+          if(tweet.user === "sharksforcheap"){
+            $shawndrost.text('@' + tweet.user + ': ' + tweet.message + " : " + tweetTime).appendTo($('.sharksforcheap'));
+          }
+
+
+          /*@mracus*/
+          if(tweet.user === "mracus"){
+            $shawndrost.text('@' + tweet.user + ': ' + tweet.message + " : " + tweetTime).appendTo($('.mracus'));
+          }
+
+
+          /*@douglashoun*/
+          if(tweet.user === "douglascalhoun"){
+            $shawndrost.text('@' + tweet.user + ': ' + tweet.message + " : " + tweetTime).appendTo($('.douglascalhoun'));
+          }
+
+
+
+
+                    
+          index -= 1;
+        }
+      });
+      });
+
+    </script>
+
+
+    <footer class="container primary-footer">
+      <small class="container">&copy; Twittler</small>
+    </footer>
   </body>
 </html>
