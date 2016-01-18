@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background: #F5F5DC;
+  color: #000000;
+  font: 300 16px/22px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.intro {
+  background: #293f50;
+  color: #888;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.btn-alt {
+  background-color: transparent;
+  border: none;
+}
+
+/*
+  ========================================
+  Primary Headers
+  ========================================
+*/
+
+.logo {
+  float: left;
+  font-size: 48px;
+  font-weight: 100;
+  letter-spacing: 10.0px;
+  line-height: 44px;
+  padding: 40px 15px 40px 15px;
+  width: 960px;
+  text-transform: uppercase;
+}
+
+.twittlerStats{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 5.0px;
+  text-align: left;
+}
+.twittlerStats li{
+  display: inline-block;
+  margin: 40px 10px;
+  vertical-align: top;
+}
+
+.secondary {
+  float: left;
+  font-size: 36px;
+  font-weight: 100;
+  letter-spacing: 10.0px;
+  line-height: 44px;
+  padding: 40px 15px 40px 15px;
+  width: 960px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.tweets {
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  line-height: 15px;
+}
+
+.Users {
+  padding: 20px 0 20px 0;
+  width: 960px;
+  float: left;
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+.primary-footer {
+  color: #648880;
+  font-size: 14px;
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
+.primary-footer small {
+  float: left;
+  font-weight: 400;
+}
+
+/*
+  ========================================
+  User Containers
+  ========================================
+*/
+
+.shawndrost {
+  display: inline-block;
+}
+
+.sharksforcheap {
+  display: inline-block;
+}
+
+.mracus {
+  display: inline-block;
+}
+
+.douglascalhoun {
+  display: inline-block;
+}
